@@ -1,76 +1,32 @@
-import React, { useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import './Menu.css'
+import Card from '../Card/Card';
+
+
 function Menu() {
-    let [menu, setMenu] =useState()
+    let [menu, setMenu] =useState();
+    useEffect(() => {
+        fetch('https://www.themealdb.com/api/json/v1/1/categories.php').then((response) => response.json()).then((data) =>{
+            setMenu(data.categories);
+            console.log('Function is Running..')
+        })
+    },[])
     return (
-        <div className="menu-content">
-            <div className="menu-body">
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card menu-card" style={{ width: '18rem' }}>
-                    <img class="card-img-top" src="" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
+            <div className="menu-content">
+                <div className="menu-body">
+                    {
+                        menu && (
+                            menu.map((obj) => {
+                                return (
+                                    <Card key={obj.id} obj ={obj}/>
+                                )
+                            })
+                        )
+                    }
+
                 </div>
             </div>
-        </div>
+
     )
 }
 
