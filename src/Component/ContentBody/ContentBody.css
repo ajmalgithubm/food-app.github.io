@@ -1,5 +1,29 @@
-.content-body{
-    background-color: red;
+.content-body {
+    background: linear-gradient(to left bottom, rgba(127, 155, 160, 0.938), rgb(245, 245, 245));
     width: 100vw;
-    height: 80vh;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-body-header h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0px 1px 2px rgb(3, 3, 3);
+    font-size: 3vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content-body-para {
+  max-width: 50vw;
+  padding: 10px;
+}
+
+.content-body-para p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5vw;
+    text-shadow: 0 0 1px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }

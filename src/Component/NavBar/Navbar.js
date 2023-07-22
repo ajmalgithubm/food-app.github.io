@@ -6,7 +6,7 @@ function NavBar() {
         <div>
             <div className="nav-bar">
                 <div className="nav-header">
-                    <h1 className='nav-bar-heading'>Catering Only</h1>
+                    <h1 className='nav-bar-heading'>Exquisite Bites Catering</h1>
                 </div>
                 <div className="nav-header">
                     <p>Menu</p>

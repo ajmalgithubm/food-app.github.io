@@ -1,0 +1,19 @@
+.menu-content{
+    background: linear-gradient(to left bottom, rgb(169, 243, 191),rgb(135, 194, 135));
+    width: 100vw;
+    padding: 10px;
+    
+}
+
+.menu-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.menu-card{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 50wh;
+}
