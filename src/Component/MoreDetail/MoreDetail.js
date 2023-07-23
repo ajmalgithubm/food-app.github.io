@@ -19,6 +19,7 @@ function MoreDetail() {
                     <li>Sugar - 1/2 cup</li>
                     <li>Rice - 1/2 cup</li>
                 </div>
+                
             </div>
         </div>
     )
