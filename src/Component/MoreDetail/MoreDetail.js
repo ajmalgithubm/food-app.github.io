@@ -43,14 +43,12 @@ function MoreDetail() {
                     <div className="more-detail-ingrediants">
                         <h1>Ingrediants</h1>
                         {
-                            [0,1,2,3,4,5,6,7,8].map((item) => {
+                            [1,2,3,4,5,6,7,8].map((item) => {
                                 return(
-                                    <li></li>
+                                    <li>{menuDetailObj[`strIngredient${item}`]} - {menuDetailObj[`strMeasure${item}`]}</li>
                                 )
                             })
                         }
-                        <li>Sugar - 1/2 cup</li>
-                        <li>Rice - 1/2 cup</li>
                     </div>
                     <div className="more-detail-youtube">
                         <YouTube videoId={youtubeId} opts={opts} onReady={onPlayerReady} />
