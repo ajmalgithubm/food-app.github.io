@@ -43,7 +43,7 @@ function MoreDetail() {
                     <div className="more-detail-ingrediants">
                         <h1>Ingrediants</h1>
                         {
-                            [1,2,3,4,5,6,7,8].map((item) => {
+                            [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((item) => {
                                 if (menuDetailObj[`strIngredient${item}`] && menuDetailObj[`strMeasure${item}`]){
                                     return (<li key={item}>{menuDetailObj[`strIngredient${item}`]} - {menuDetailObj[`strMeasure${item}`]}</li>)
                                 };
