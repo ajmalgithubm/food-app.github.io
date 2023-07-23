@@ -7,7 +7,7 @@ function MenuItems() {
     let [catogoryList, setCategoryList] = useState();
     let data = useContext(menuCategoryContext);
     useEffect(() => {
-        fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood').then((response) => response.json() ).then((data) => {
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${data.menuCategory}`).then((response) => response.json() ).then((data) => {
             setCategoryList(data.meals)
         })
     },[])
@@ -15,7 +15,7 @@ function MenuItems() {
         <div>
             <div className="menu-item-content">
                 <div className="menu-category-head">
-                    <h1>Seafood</h1>
+                    <h1>{data.menuCategory}</h1>
                 </div>
                 <div className="menu-category-list">
                     { catogoryList&&
