@@ -38,10 +38,12 @@
     text-shadow: 0px 1px 1px rgb(3, 3, 3);
     line-height: 30px;
 }
-.more-detail-prepare p{
+
+.more-detail-prepare p {
     max-width: 95%;
-    
+
 }
+
 .more-detail-ingrediants {
     align-self: self-start;
     max-width: 95%;
@@ -49,4 +51,14 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family: cursive;
     text-shadow: 0px 1px 1px rgb(3, 3, 3);
+}
+
+.more-detail-youtube {
+    width: 100%;
+    min-height: 400px;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: cursive;
+    text-shadow: 0px 1px 1px rgb(3, 3, 3);
+    text-align: center;
 }

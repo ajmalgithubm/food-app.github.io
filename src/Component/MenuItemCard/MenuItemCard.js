@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './MenuItemCard.css';
 import { useNavigate } from 'react-router-dom';
+import { menuCategoryContext } from '../../App';
 function MenuItemCard({ obj }) {
+      let data = useContext(menuCategoryContext);
       let navigate = useNavigate();
       return (
             <div class="card menu-item-card" style={{ width: "18rem" }}>
@@ -11,7 +13,10 @@ function MenuItemCard({ obj }) {
                               <h5 class="card-title">{obj.strMeal}</h5>
                         </div>
                         <div>
-                              <a href="#" class="btn btn-primary card-btn-more" onClick={() => navigate('/moredetail')}>More Detail</a>
+                              <a href="#" class="btn btn-primary card-btn-more" onClick={() => {
+                                    data.setMenuDetail(obj.strMeal);
+                                    navigate('/moredetail');
+                              }}>More Detail</a>
                         </div>
                   </div>
             </div>

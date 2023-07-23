@@ -15,7 +15,7 @@ function App() {
   console.log(menuCategory)
   return (
     
-      <menuCategoryContext.Provider value={{ menuCategory: menuCategory, setMenuCategory: setMenuCategory }}>
+      <menuCategoryContext.Provider value={{ menuCategory: menuCategory, setMenuCategory: setMenuCategory, menuDetail:menuDetail, setMenuDetail:setMenuDetail }}>
        <BrowserRouter>
         <div className="App">
           <NavBar />

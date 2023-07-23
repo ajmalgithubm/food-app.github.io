@@ -6,10 +6,12 @@ import Card from '../Card/Card';
 function Menu() {
     let [menu, setMenu] =useState();
     useEffect(() => {
-        fetch('https://www.themealdb.com/api/json/v1/1/categories.php').then((response) => response.json()).then((data) =>{
-            setMenu(data.categories);
-            console.log('Function is Running..')
-        })
+        if(!menu){
+            fetch('https://www.themealdb.com/api/json/v1/1/categories.php').then((response) => response.json()).then((data) => {
+                setMenu(data.categories);
+                console.log('Function is Running..')
+            })
+        }
     },[])
     return (
             <div className="menu-content">
